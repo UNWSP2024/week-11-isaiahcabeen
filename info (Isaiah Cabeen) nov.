@@ -1,0 +1,23 @@
+import tkinter as tk
+
+window = tk.Tk()
+window.title("User Info")
+#basically how big the window will be
+window.geometry("300x200")
+#my personal information
+name = "Isaiah Cabeen"
+address = "2004 13th Ave, NE"
+
+def show_info():
+    info_label.config(text=f"Name: {name}\nAddress: {address}")
+#label to display the info
+info_label = tk.Label(window, text="", font=("Arial", 12), justify="left")
+info_label.pack(pady=20)
+#Shows the information
+show_button = tk.Button(window, text="Show Info", command=show_info, font=("Arial", 10))
+show_button.pack(pady=10)
+#A quit button when im done
+quit_button = tk.Button(window, text="Quit", command=window.quit, font=("Arial", 10))
+quit_button.pack(pady=10)
+
+window.mainloop()
